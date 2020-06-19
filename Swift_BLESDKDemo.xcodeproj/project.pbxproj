@@ -17,10 +17,10 @@
 		26B550E4249C69EF00CB9796 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B550E0249C69EF00CB9796 /* MBProgressHUD.m */; };
 		26B550E5249C69EF00CB9796 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 26B550E1249C69EF00CB9796 /* LICENSE */; };
 		26B550E6249C69EF00CB9796 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 26B550E3249C69EF00CB9796 /* README.mdown */; };
-		26B550FA249C8FCF00CB9796 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550F7249C8FCE00CB9796 /* BluetoothManager.framework */; };
-		26B550FB249C8FCF00CB9796 /* BLEWifiConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550F8249C8FCF00CB9796 /* BLEWifiConfig.framework */; };
-		26B550FC249C8FCF00CB9796 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550F9249C8FCF00CB9796 /* SLPCommon.framework */; };
 		26B550FF249C8FDD00CB9796 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550FE249C8FDD00CB9796 /* libc++.tbd */; };
+		26B55127249CA60D00CB9796 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55125249CA60D00CB9796 /* BluetoothManager.framework */; };
+		26B55128249CA60D00CB9796 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55126249CA60D00CB9796 /* SLPCommon.framework */; };
+		26B5512A249CA9C100CB9796 /* BLEWifiConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +41,10 @@
 		26B550E2249C69EF00CB9796 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		26B550E3249C69EF00CB9796 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		26B550E8249C6ABF00CB9796 /* Swift_BLESDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift_BLESDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		26B550F7249C8FCE00CB9796 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
-		26B550F8249C8FCF00CB9796 /* BLEWifiConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BLEWifiConfig.framework; sourceTree = "<group>"; };
-		26B550F9249C8FCF00CB9796 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
 		26B550FE249C8FDD00CB9796 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		26B55125249CA60D00CB9796 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
+		26B55126249CA60D00CB9796 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
+		26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BLEWifiConfig.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +53,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B550FF249C8FDD00CB9796 /* libc++.tbd in Frameworks */,
-				26B550FA249C8FCF00CB9796 /* BluetoothManager.framework in Frameworks */,
-				26B550FB249C8FCF00CB9796 /* BLEWifiConfig.framework in Frameworks */,
-				26B550FC249C8FCF00CB9796 /* SLPCommon.framework in Frameworks */,
+				26B55127249CA60D00CB9796 /* BluetoothManager.framework in Frameworks */,
+				26B55128249CA60D00CB9796 /* SLPCommon.framework in Frameworks */,
+				26B5512A249CA9C100CB9796 /* BLEWifiConfig.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +82,9 @@
 		26B550B2249C4D6400CB9796 /* Swift_BLESDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				26B550F8249C8FCF00CB9796 /* BLEWifiConfig.framework */,
-				26B550F7249C8FCE00CB9796 /* BluetoothManager.framework */,
-				26B550F9249C8FCF00CB9796 /* SLPCommon.framework */,
+				26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */,
+				26B55125249CA60D00CB9796 /* BluetoothManager.framework */,
+				26B55126249CA60D00CB9796 /* SLPCommon.framework */,
 				26B550DF249C69EF00CB9796 /* MBProgressHUD */,
 				26B550B3249C4D6400CB9796 /* AppDelegate.swift */,
 				26B550CD249C558200CB9796 /* ConfigWiFiViewController.swift */,
@@ -284,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BluetoothManager
 import BLEWifiConfig
 
 class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelegate{
@@ -90,18 +89,35 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         if self.deviceType == SLPDeviceTypes.nox2_WiFi {
-//            SLPBLEManager.shared()?.scanBluetooth(withTimeoutInterval: <#T##CGFloat#>, completion: <#T##SLPBLEScanHandle!##SLPBLEScanHandle!##(SLPBLEScanReturnCodes, Int, SLPPeripheralInfo?) -> Void#>)
             
-//            SLPBleWifiConfig.shared().conf
-//            SLPBleWifiConfig.sharedInstance()?.conf
-           
-        
+            SLPBleWifiConfig.shared()?.configPeripheral(currPer?.peripheral, deviceType: SLPDeviceTypes.nox2_WiFi, wifiName: self.textfield1.text, password: self.textfield2.text, completion: { (status: SLPDataTransferStatus, data: Any?) in
+                //                MBProgressHUD.h
+                if status == SLPDataTransferStatus.succeed
+                {
+                    
+                }
+                else
+                {
+                    
+                }
+            })
+    
         }
         else
         {
-            
+            let port = NSInteger(self.textfield4.text!)!
+            SLPBleWifiConfig.shared()?.configPeripheral(currPer?.peripheral, deviceType: SLPDeviceTypes.nox2_WiFi, serverAddress: self.textfield3.text, port: port, wifiName: self.textfield1.text, password: self.textfield2.text, completion: { (status: SLPDataTransferStatus, Data: Any?) in
+                
+                if status == SLPDataTransferStatus.succeed
+                {
+                    
+                }
+                else
+                {
+                    
+                }
+            })
         }
-        
     }
     
     func didselectDeviceType(devicename: NSString) -> Void {

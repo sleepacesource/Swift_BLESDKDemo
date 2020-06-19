@@ -7,17 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <BluetoothManager/BluetoothManager.h>
-#import <SLPCommon/SLPDataTransferCommon.h>
+#import <BluetoothManager/BluetoothManager.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @class CBPeripheral;
 @interface SLPBleWifiConfig : NSObject
 
 @property (nonatomic , readonly) CBPeripheral *peripheral;
 
-+ (SLPBleWifiConfig *)sharedInstance;
-
-- (void)test1;
++ (SLPBleWifiConfig *)sharedBleWifiConfig;
 
 - (void)connectAndGetDeviceInfoWithPeripheral:(CBPeripheral *)peripheral
                deviceType:(SLPDeviceTypes)deviceType
