@@ -15,14 +15,14 @@
                 <outlet property="label2" destination="NPQ-6V-0Ne" id="peq-Km-23c"/>
                 <outlet property="label3" destination="2tL-Bl-XhH" id="39I-Id-kBf"/>
                 <outlet property="label4" destination="aCX-27-oJr" id="CMr-ND-RQx"/>
-                <outlet property="label5" destination="oit-IV-ehI" id="Vos-de-fx0"/>
-                <outlet property="label6" destination="0fR-rK-TvT" id="VUE-XY-kSP"/>
-                <outlet property="label7" destination="5DR-CA-e1C" id="KEC-Bi-N5b"/>
-                <outlet property="label8" destination="NDI-bR-ut5" id="38M-h9-Dlm"/>
-                <outlet property="textfield1" destination="sKY-mO-XJS" id="hjD-bc-46a"/>
-                <outlet property="textfield2" destination="EdU-pt-aJN" id="jul-1X-A9n"/>
-                <outlet property="textfield3" destination="McB-M4-CSW" id="mQy-4y-HAT"/>
-                <outlet property="textfield4" destination="w4U-TQ-l0v" id="OUn-nU-vim"/>
+                <outlet property="label5" destination="5DR-CA-e1C" id="LzA-D4-ozW"/>
+                <outlet property="label6" destination="NDI-bR-ut5" id="k0f-DY-uPF"/>
+                <outlet property="label7" destination="oit-IV-ehI" id="Rp9-LV-wJH"/>
+                <outlet property="label8" destination="0fR-rK-TvT" id="hSf-dt-zpd"/>
+                <outlet property="textfield1" destination="McB-M4-CSW" id="Bi2-v3-s4n"/>
+                <outlet property="textfield2" destination="w4U-TQ-l0v" id="RWJ-DN-QIg"/>
+                <outlet property="textfield3" destination="sKY-mO-XJS" id="z0D-Rz-1v1"/>
+                <outlet property="textfield4" destination="EdU-pt-aJN" id="V5u-cK-Eeh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view1" destination="bu3-j6-wWd" id="sqq-Av-6Ox"/>
             </connections>
@@ -116,14 +116,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCX-27-oJr">
-                            <rect key="frame" x="186" y="16" width="151" height="18"/>
+                            <rect key="frame" x="180" y="16" width="151" height="18"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.51764705879999995" green="0.56078431370000004" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qB-Ll-5sf">
-                            <rect key="frame" x="10" y="4" width="335" height="42"/>
+                            <rect key="frame" x="5" y="4" width="335" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="sdk_icon_rightarrow.png"/>
                             <connections>
@@ -159,6 +159,6 @@
         </view>
     </objects>
     <resources>
-        <image name="sdk_icon_rightarrow.png" width="128" height="128"/>
+        <image name="sdk_icon_rightarrow.png" width="6.5" height="11.5"/>
     </resources>
 </document>

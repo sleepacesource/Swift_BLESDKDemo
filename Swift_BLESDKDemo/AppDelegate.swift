@@ -11,15 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
+    let window: UIWindow = UIWindow.init(frame: UIScreen.main.bounds)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.window?.rootViewController = UINavigationController(rootViewController: ConfigWiFiViewController())
-        self.window?.backgroundColor = .white;
-        self.window?.makeKeyAndVisible()
-        
+        self.window.rootViewController = UINavigationController(rootViewController: ConfigWiFiViewController())
+        self.window.backgroundColor = .white;
+        self.window.makeKeyAndVisible()
+    
         return true
     }
     

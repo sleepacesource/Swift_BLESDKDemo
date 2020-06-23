@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "SLPBleWifiConfig.h"
+#import "SLPGetDeviceInfo.h"
+#import "SLPWiFiConnectStatus.h"
+#import "SLPGetWiFiInfo.h"
+
 
 

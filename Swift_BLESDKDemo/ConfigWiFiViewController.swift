@@ -30,12 +30,14 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
     
     var currPer: SLPPeripheralInfo?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor.white
         self.initUI()
+        
+        SLPBLEManager.shared()
     }
     
     func initUI() -> Void {
@@ -67,6 +69,8 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
         
         self.textfield3.text = "172.14.1.100";
         self.textfield4.text = "3013";
+        self.textfield1.text = "CM-CC"
+        self.textfield2.text = "20202020"
         
         self.textfield1.delegate = self
         self.textfield2.delegate = self
@@ -89,33 +93,54 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         if self.deviceType == SLPDeviceTypes.nox2_WiFi {
-            
             SLPBleWifiConfig.shared()?.configPeripheral(currPer?.peripheral, deviceType: SLPDeviceTypes.nox2_WiFi, wifiName: self.textfield1.text, password: self.textfield2.text, completion: { (status: SLPDataTransferStatus, data: Any?) in
-                //                MBProgressHUD.h
+                MBProgressHUD.hide(for: self.view, animated: true)
+                var result = ""
                 if status == SLPDataTransferStatus.succeed
                 {
-                    
+                    print("config succeed")
+                    result = NSLocalizedString("reminder_configuration_success", comment: "");
                 }
                 else
                 {
-                    
+                    result = NSLocalizedString("reminder_configuration_fail", comment: "");
+                    print("config failed")
                 }
+                
+                let alert = UIAlertController.init(title: "", message: result, preferredStyle: .alert)
+                
+                let cancel = UIAlertAction(title: NSLocalizedString("btn_ok", comment: ""), style: .cancel, handler: nil)
+                alert.addAction(cancel)
+                
+                alert.show(self, sender: nil)
+                
             })
-    
+            
         }
         else
         {
             let port = NSInteger(self.textfield4.text!)!
-            SLPBleWifiConfig.shared()?.configPeripheral(currPer?.peripheral, deviceType: SLPDeviceTypes.nox2_WiFi, serverAddress: self.textfield3.text, port: port, wifiName: self.textfield1.text, password: self.textfield2.text, completion: { (status: SLPDataTransferStatus, Data: Any?) in
+            SLPBleWifiConfig.shared().configPeripheral(currPer?.peripheral, deviceType: self.deviceType!, serverAddress: self.textfield3.text, port: port, wifiName: self.textfield1.text, password: self.textfield2.text, completion: { (status: SLPDataTransferStatus, Data: Any?) in
+                MBProgressHUD.hide(for: self.view, animated: true)
                 
+                var result = ""
                 if status == SLPDataTransferStatus.succeed
                 {
-                    
+                    print("config succeed")
+                    result = NSLocalizedString("reminder_configuration_success", comment: "");
                 }
                 else
                 {
-                    
+                    result = NSLocalizedString("reminder_configuration_fail", comment: "");
+                    print("config failed")
                 }
+                
+                let alert = UIAlertController.init(title: "", message: result, preferredStyle: .alert)
+                
+                let cancel = UIAlertAction(title: NSLocalizedString("btn_ok", comment: ""), style: .cancel, handler: nil)
+                alert.addAction(cancel)
+                
+                alert.show(self, sender: nil)
             })
         }
     }
@@ -172,6 +197,10 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
     
     func resignTextfiled() -> Void {
         
+        self.textfield1.resignFirstResponder()
+        self.textfield2.resignFirstResponder()
+        self.textfield3.resignFirstResponder()
+        self.textfield4.resignFirstResponder()
         
     }
 }

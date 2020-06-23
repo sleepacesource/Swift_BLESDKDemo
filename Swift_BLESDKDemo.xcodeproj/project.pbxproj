@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26362A0324A0584A00B8F360 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550FE249C8FDD00CB9796 /* libc++.tbd */; };
 		26B550B4249C4D6400CB9796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B550B3249C4D6400CB9796 /* AppDelegate.swift */; };
 		26B550BD249C4D6700CB9796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B550BC249C4D6700CB9796 /* Assets.xcassets */; };
 		26B550CF249C558200CB9796 /* ConfigWiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B550CD249C558200CB9796 /* ConfigWiFiViewController.swift */; };
@@ -17,16 +18,23 @@
 		26B550E4249C69EF00CB9796 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B550E0249C69EF00CB9796 /* MBProgressHUD.m */; };
 		26B550E5249C69EF00CB9796 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 26B550E1249C69EF00CB9796 /* LICENSE */; };
 		26B550E6249C69EF00CB9796 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 26B550E3249C69EF00CB9796 /* README.mdown */; };
-		26B550FF249C8FDD00CB9796 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B550FE249C8FDD00CB9796 /* libc++.tbd */; };
-		26B55127249CA60D00CB9796 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55125249CA60D00CB9796 /* BluetoothManager.framework */; };
-		26B55128249CA60D00CB9796 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55126249CA60D00CB9796 /* SLPCommon.framework */; };
-		26B5512A249CA9C100CB9796 /* BLEWifiConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */; };
+		26B55172249CB5BD00CB9796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B550BE249C4D6700CB9796 /* LaunchScreen.storyboard */; };
+		26B5517E249CB97D00CB9796 /* sdk_icon_nav_downarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B55176249CB97C00CB9796 /* sdk_icon_nav_downarrow@3x.png */; };
+		26B5517F249CB97D00CB9796 /* sdk_icon_rightarrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B55177249CB97C00CB9796 /* sdk_icon_rightarrow@3x.png */; };
+		26B55180249CB97D00CB9796 /* sdk_icon_rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B55178249CB97C00CB9796 /* sdk_icon_rightarrow@2x.png */; };
+		26B55181249CB97D00CB9796 /* sdk_btn_refresh_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B55179249CB97C00CB9796 /* sdk_btn_refresh_nor@2x.png */; };
+		26B55182249CB97D00CB9796 /* sdk_btn_refresh_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B5517A249CB97D00CB9796 /* sdk_btn_refresh_nor@3x.png */; };
+		26B55183249CB97D00CB9796 /* sdk_btn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B5517B249CB97D00CB9796 /* sdk_btn_back@3x.png */; };
+		26B55184249CB97D00CB9796 /* sdk_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B5517C249CB97D00CB9796 /* sdk_btn_back@2x.png */; };
+		26B55185249CB97D00CB9796 /* sdk_icon_nav_downarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B5517D249CB97D00CB9796 /* sdk_icon_nav_downarrow@2x.png */; };
+		26C1EA0824A1D2D600837733 /* BLEWifiConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C1EA0524A1D2D500837733 /* BLEWifiConfig.framework */; };
+		26C1EA0924A1D2D600837733 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C1EA0624A1D2D600837733 /* SLPCommon.framework */; };
+		26C1EA0A24A1D2D600837733 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C1EA0724A1D2D600837733 /* BluetoothManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26B550B0249C4D6400CB9796 /* Swift_BLESDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_BLESDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B550B3249C4D6400CB9796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26B550BA249C4D6400CB9796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26B550BC249C4D6700CB9796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26B550BF249C4D6700CB9796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26B550C1249C4D6700CB9796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,9 +50,17 @@
 		26B550E3249C69EF00CB9796 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		26B550E8249C6ABF00CB9796 /* Swift_BLESDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift_BLESDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		26B550FE249C8FDD00CB9796 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		26B55125249CA60D00CB9796 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
-		26B55126249CA60D00CB9796 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
-		26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BLEWifiConfig.framework; sourceTree = "<group>"; };
+		26B55176249CB97C00CB9796 /* sdk_icon_nav_downarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_icon_nav_downarrow@3x.png"; sourceTree = "<group>"; };
+		26B55177249CB97C00CB9796 /* sdk_icon_rightarrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_icon_rightarrow@3x.png"; sourceTree = "<group>"; };
+		26B55178249CB97C00CB9796 /* sdk_icon_rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_icon_rightarrow@2x.png"; sourceTree = "<group>"; };
+		26B55179249CB97C00CB9796 /* sdk_btn_refresh_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_btn_refresh_nor@2x.png"; sourceTree = "<group>"; };
+		26B5517A249CB97D00CB9796 /* sdk_btn_refresh_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_btn_refresh_nor@3x.png"; sourceTree = "<group>"; };
+		26B5517B249CB97D00CB9796 /* sdk_btn_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_btn_back@3x.png"; sourceTree = "<group>"; };
+		26B5517C249CB97D00CB9796 /* sdk_btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_btn_back@2x.png"; sourceTree = "<group>"; };
+		26B5517D249CB97D00CB9796 /* sdk_icon_nav_downarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_icon_nav_downarrow@2x.png"; sourceTree = "<group>"; };
+		26C1EA0524A1D2D500837733 /* BLEWifiConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BLEWifiConfig.framework; sourceTree = "<group>"; };
+		26C1EA0624A1D2D600837733 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
+		26C1EA0724A1D2D600837733 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B550FF249C8FDD00CB9796 /* libc++.tbd in Frameworks */,
-				26B55127249CA60D00CB9796 /* BluetoothManager.framework in Frameworks */,
-				26B55128249CA60D00CB9796 /* SLPCommon.framework in Frameworks */,
-				26B5512A249CA9C100CB9796 /* BLEWifiConfig.framework in Frameworks */,
+				26362A0324A0584A00B8F360 /* libc++.tbd in Frameworks */,
+				26C1EA0824A1D2D600837733 /* BLEWifiConfig.framework in Frameworks */,
+				26C1EA0924A1D2D600837733 /* SLPCommon.framework in Frameworks */,
+				26C1EA0A24A1D2D600837733 /* BluetoothManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,19 +98,26 @@
 		26B550B2249C4D6400CB9796 /* Swift_BLESDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				26B55129249CA9C100CB9796 /* BLEWifiConfig.framework */,
-				26B55125249CA60D00CB9796 /* BluetoothManager.framework */,
-				26B55126249CA60D00CB9796 /* SLPCommon.framework */,
+				26C1EA0524A1D2D500837733 /* BLEWifiConfig.framework */,
+				26C1EA0724A1D2D600837733 /* BluetoothManager.framework */,
+				26C1EA0624A1D2D600837733 /* SLPCommon.framework */,
 				26B550DF249C69EF00CB9796 /* MBProgressHUD */,
 				26B550B3249C4D6400CB9796 /* AppDelegate.swift */,
 				26B550CD249C558200CB9796 /* ConfigWiFiViewController.swift */,
 				26B550CE249C558200CB9796 /* ConfigWiFiViewController.xib */,
 				26B550D1249C55D400CB9796 /* SearchViewController.swift */,
 				26B550D4249C55D400CB9796 /* SearchViewController.xib */,
-				26B550B9249C4D6400CB9796 /* Main.storyboard */,
 				26B550E8249C6ABF00CB9796 /* Swift_BLESDKDemo-Bridging-Header.h */,
 				26B550DD249C656800CB9796 /* Localizable.strings */,
 				26B550BC249C4D6700CB9796 /* Assets.xcassets */,
+				26B5517C249CB97D00CB9796 /* sdk_btn_back@2x.png */,
+				26B5517B249CB97D00CB9796 /* sdk_btn_back@3x.png */,
+				26B55179249CB97C00CB9796 /* sdk_btn_refresh_nor@2x.png */,
+				26B5517A249CB97D00CB9796 /* sdk_btn_refresh_nor@3x.png */,
+				26B5517D249CB97D00CB9796 /* sdk_icon_nav_downarrow@2x.png */,
+				26B55176249CB97C00CB9796 /* sdk_icon_nav_downarrow@3x.png */,
+				26B55178249CB97C00CB9796 /* sdk_icon_rightarrow@2x.png */,
+				26B55177249CB97C00CB9796 /* sdk_icon_rightarrow@3x.png */,
 				26B550BE249C4D6700CB9796 /* LaunchScreen.storyboard */,
 				26B550C1249C4D6700CB9796 /* Info.plist */,
 			);
@@ -179,9 +202,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B55172249CB5BD00CB9796 /* LaunchScreen.storyboard in Resources */,
+				26B55182249CB97D00CB9796 /* sdk_btn_refresh_nor@3x.png in Resources */,
 				26B550DB249C656800CB9796 /* Localizable.strings in Resources */,
 				26B550D0249C558200CB9796 /* ConfigWiFiViewController.xib in Resources */,
+				26B5517E249CB97D00CB9796 /* sdk_icon_nav_downarrow@3x.png in Resources */,
+				26B55184249CB97D00CB9796 /* sdk_btn_back@2x.png in Resources */,
+				26B55185249CB97D00CB9796 /* sdk_icon_nav_downarrow@2x.png in Resources */,
 				26B550E5249C69EF00CB9796 /* LICENSE in Resources */,
+				26B55180249CB97D00CB9796 /* sdk_icon_rightarrow@2x.png in Resources */,
+				26B55183249CB97D00CB9796 /* sdk_btn_back@3x.png in Resources */,
+				26B5517F249CB97D00CB9796 /* sdk_icon_rightarrow@3x.png in Resources */,
+				26B55181249CB97D00CB9796 /* sdk_btn_refresh_nor@2x.png in Resources */,
 				26B550D8249C55D400CB9796 /* SearchViewController.xib in Resources */,
 				26B550E6249C69EF00CB9796 /* README.mdown in Resources */,
 				26B550BD249C4D6700CB9796 /* Assets.xcassets in Resources */,
@@ -205,14 +237,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		26B550B9249C4D6400CB9796 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26B550BA249C4D6400CB9796 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		26B550BE249C4D6700CB9796 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
