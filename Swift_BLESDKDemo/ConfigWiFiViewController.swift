@@ -112,7 +112,7 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
                 let cancel = UIAlertAction(title: NSLocalizedString("btn_ok", comment: ""), style: .cancel, handler: nil)
                 alert.addAction(cancel)
                 
-                alert.show(self, sender: nil)
+                self.present(alert, animated: true, completion: nil)
                 
             })
             
@@ -140,7 +140,8 @@ class ConfigWiFiViewController: UIViewController,scanDelegate ,UITextFieldDelega
                 let cancel = UIAlertAction(title: NSLocalizedString("btn_ok", comment: ""), style: .cancel, handler: nil)
                 alert.addAction(cancel)
                 
-                alert.show(self, sender: nil)
+                self.present(alert, animated: true, completion: nil)
+                
             })
         }
     }
