@@ -391,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.medicatech.Swift-BLESDKDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Swift_BLESDKDemo";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/san/Desktop/WorkProject/GitGubProject/Swift_BLESDKDemo/Swift_BLESDKDemo/Swift_BLESDKDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_BLESDKDemo/Swift_BLESDKDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,7 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.medicatech.Swift-BLESDKDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Swift_BLESDKDemo";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/san/Desktop/WorkProject/GitGubProject/Swift_BLESDKDemo/Swift_BLESDKDemo/Swift_BLESDKDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_BLESDKDemo/Swift_BLESDKDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
