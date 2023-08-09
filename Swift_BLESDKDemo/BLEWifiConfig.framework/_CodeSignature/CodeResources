@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/BLEWifiConfig.h</key>
 		<data>
-		OdwEHhmzvNFpNDss7QFjo2v8R5w=
+		CziRXKnMr1x+0tlvHSe/z3daDfk=
 		</data>
 		<key>Headers/SLPBleWifiConfig.h</key>
 		<data>
-		/F6zwDqaFpV9FIAM2OGc85ieztQ=
+		hu5ReWawuEIBrTgUguEy8CRldjw=
 		</data>
 		<key>Headers/SLPGetDeviceInfo.h</key>
 		<data>
-		CplZUoEtWriMdpSSmfXuWEi/w+s=
+		xIZp/av02BBXMOJvQDNwd/XbSHE=
 		</data>
 		<key>Headers/SLPGetWiFiInfo.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7J3tLSbNQ1c5plzp84ApFkL686w=
+		g051LXBr46bhjnw4iUhfIjJ9sQc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -39,33 +39,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OdwEHhmzvNFpNDss7QFjo2v8R5w=
+			CziRXKnMr1x+0tlvHSe/z3daDfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			LsfZYGl8phTvTaRw37I0TGmfTtsNHXoVab1igV9oxYY=
+			j3tbR/YN2da9RWEERgrjWgiRNAwZZaIDr7UT0zJtvVg=
 			</data>
 		</dict>
 		<key>Headers/SLPBleWifiConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/F6zwDqaFpV9FIAM2OGc85ieztQ=
+			hu5ReWawuEIBrTgUguEy8CRldjw=
 			</data>
 			<key>hash2</key>
 			<data>
-			oFQlx7ArY01ssIlQ6TcSgHQY2ZolAsxoiW6nDmteq3I=
+			nOMyxKxDSdN8AgvO2Mzh4c7oYSVtEpEkXWuDNIWHX1E=
 			</data>
 		</dict>
 		<key>Headers/SLPGetDeviceInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CplZUoEtWriMdpSSmfXuWEi/w+s=
+			xIZp/av02BBXMOJvQDNwd/XbSHE=
 			</data>
 			<key>hash2</key>
 			<data>
-			1kCO9mMWqI9j1B9tuF1jGB3IKi1bHgltdpqXWxJIzYw=
+			H5ho4YTyHRrcCOWinb85qcGHxY0cSI2veVrq6jnSLKA=
 			</data>
 		</dict>
 		<key>Headers/SLPGetWiFiInfo.h</key>

@@ -18,40 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SLPHTTPManager : NSObject
 
-@property (nonatomic,readonly) NSString *httpIP;
 @property (nonatomic,readonly) NSString *sid;
-
 @property (nonatomic,readonly) NSString *urlString;
 @property (nonatomic,readonly) NSString *channelID;
 
 +(SLPHTTPManager*)sharedInstance;
 
-- (void)installSDKWithToken:(NSString *)token ip:(NSString *)ip channelID:(NSInteger)channelID timeout:(CGFloat)timeoutInterval completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)bindDevice:(NSString *)deviceID leftRight:(NSInteger)leftRight  timeout:(CGFloat)timeoutInterval completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)unBindDevice:(NSString *)deviceID leftRight:(NSInteger)leftRight  timeout:(CGFloat)timeoutInterval completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)getBindDevice:(NSString *)deviceID  timeout:(CGFloat)timeoutInterval completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)getDeviceVersionWithChannelId:(NSString *)channelId lan:(NSString *)lan  timeout:(CGFloat)timeoutInterval completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)configAidInfo:(SLPAidInfo *)aidInfo deviceInfo:(NSString *)deviceName deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)getAidInfoWithDeviceInfo:(NSString *)deviceName  timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)configClockDormancy:(SLPClockDormancyBean *)clockDormancyBean deviceInfo:(NSString *)deviceName  timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)getClockDormancyWithDeviceInfo:(NSString *)deviceName  timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)getAlarmListWithDeviceInfo:(NSString *)deviceName  timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-- (void)alarmConfig:(SLPAlarmInfo *)alarmInfo deviceInfo:(NSString *)deviceName deviceType:(SLPDeviceTypes)deviceType  timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
-
-
-
-/*******************************************************************************************************************************
- *******************************************************************************************************************************
 /*
  *
  *初始化HTTP信息
@@ -65,41 +37,227 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*
 *授权
-*@token
-*@timeoutInterval
-*@completion
+*@param token  token值
+*@param timeoutInterval 超时时间（秒s）
+*@param completion 授权回调，包含tcp连接信息
 */
 - (void)authorize:(NSString *)token
           timeout:(CGFloat)timeoutInterval
        completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
 
 
-/*
+/**
  *获取当前设备信息
- *@param
+ *@param timeoutInterval 超时时间（秒s）
+ *@param completion 回调
  */
-- (void)getBindedDeviceInformationWithUserID:(NSString *)userID
-                                     timeout:(CGFloat)timeoutInterval
+- (void)getBindedDeviceInformationWithTimeout:(CGFloat)timeoutInterval
                                    completion:(void (^)(NSInteger status,id responseObject, NSString *error))completion;
 
 /**
- *  绑定设备
- *
+ *绑定设备
+ *@param deviceId 设备id
+ *@param timeoutInterval 超时时间（秒s）
+ *@param completion 回调
  */
-- (void)bindDeviceWithParameters:(NSDictionary *)parameters
-                                 userID:(NSString *)userID
+- (void)bindDeviceWithDeviceId:(NSString *)deviceId
                                 timeOut:(CGFloat)timeoutInterval
                              completion:(void (^)(BOOL result, NSDictionary *dict,NSString *error))completion;
 
-/*
- *  解绑设备
- *
+/**
+ *解绑设备
+ *@param deviceId 设备id
+ *@param timeoutInterval 超时时间（秒s）
+ *@param completion 回调
  */
-
-- (void)unBindDeviceWithParameters:(NSDictionary *)parameters
-                                userID:(NSString *)userID
+- (void)unBindDeviceWithDeviceId:(NSString *)deviceId
                                timeOut:(CGFloat)timeoutInterval
                             completion:(void (^)(BOOL result, NSString *error))completion;
+
+/**
+ *获取设备版本信息
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param timeoutInterval 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getDeviceVersionWithParameters:(NSDictionary *)parameters
+                               timeout:(CGFloat)timeoutInterval
+                            completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+
+/**
+ *时钟休眠配置
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configClockDormancyWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *助眠配置
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configAidInfoWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取助眠配置
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getAidInfoWithDeviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取时钟休眠
+ *@param deviceID 设备ID
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getClockDormancyWithDeviceInfo:(NSString *)deviceID timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *删除闹钟
+ *@param alarmID 闹钟id
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)deleteAlarmWithAlarmID:(NSInteger)alarmID deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *闹钟配置
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备名
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configAlarmInfoWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *闹钟配置
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configAlarmInfoWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取闹钟列表
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getAlarmListWithDeviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ * 修改定时香薰 有则改，无则加
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configTimeAromaInfoWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取定时香薰
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getTimeAromaListWithDeviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *删除定时香薰
+ *@param aromatherapyId 定时香薰id
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)deleteTimeAromaWithID:(NSInteger)aromatherapyId deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *配置中心健
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configCenterKeyWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取中心键
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getCenterKeyWithDeviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *配置小夜灯
+ *@param parameters 传入参数字典，具体包含key见文档
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)configNightLightWithParameters:(NSDictionary *)parameters deviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType  timeout:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+ *获取小夜灯
+ *@param deviceID 设备ID
+ *@param deviceType 设备类型
+ *@param timeout 超时时间（秒s）
+ *@param completion 回调
+ */
+- (void)getNightLightWithDeviceInfo:(NSString *)deviceID deviceType:(SLPDeviceTypes)deviceType timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+*获取日报告
+*@param param 传入参数字典
+*@param timeout 超时时间（秒s）
+*@param completion 回调
+*/
+
+/**param字典格式
+   param = @{
+ @"startTime":（Integer）开始时间戳,
+ @"num":（Int）返回记录数目，@"order":(Int)返回数据顺序，0降序，1升序，
+ @"deviceType: 设备类型"
+ }
+*/
+- (void)getDailyReport:(NSDictionary *)param timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
+
+/**
+*获取日报告带分数
+*@param param 传入参数字典
+*@param timeout 超时时间（秒s）
+*@param completion 回调
+*/
+
+/**param字典格式
+   param = @{
+ @"startTime":（Integer）开始时间戳,
+ @"endTime":（Integer）截止时间戳，@"dateFormate":(String)返回日期格式，
+ @"deviceType: 设备类型"
+ }
+*/
+- (void)getReportScore:(NSDictionary *)param timeOut:(CGFloat)timeout completion:(void (^)(BOOL result,id responseObject, NSString *error))completion;
 
 
 @end
